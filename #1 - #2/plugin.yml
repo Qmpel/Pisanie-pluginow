@@ -1,0 +1,11 @@
+name: YouTube Begginer Plugin
+version: 1.0
+main: me.kamilkime.youtube.Main
+author: Kamilkime
+website: http://youtube.pl/kamilkime/
+
+commands:
+  gracz:
+  konsola:
+  ulecz:
+    aliases: [lecz, heal, leczenie]
