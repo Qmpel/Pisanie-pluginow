@@ -1,0 +1,19 @@
+name: YouTube Begginer Plugin
+version: 1.0
+main: me.kamilkime.youtube.Main
+author: Kamilkime
+website: http://youtube.pl/kamilkime/
+
+commands:
+  czas:
+  pogoda:
+  reverse:
+
+permissions:
+  youtube.*:
+    default: op
+    children:
+      youtube.czas: true
+      youtube.reverse: true
+  youtube.czas:
+    default: true
