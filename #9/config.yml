@@ -1,0 +1,7 @@
+#Lokalizacja spawna
+spawnLocX: 0
+spawnLocY: 100
+spawnLocZ: 0
+spawnLocWorld: 'world'
+#Pliki gracza
+players:
