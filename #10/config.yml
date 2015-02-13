@@ -1,0 +1,10 @@
+jedzenie:
+  x: 0
+  y: 100
+  z: 0
+  world: world
+autoMsg:
+  - '&6&lAutoMSG 1'
+  - '&a&lAutoMSG 2'
+  - '&b&lAutoMSG 3'
+  - '&c&lAutoMSG 4'
