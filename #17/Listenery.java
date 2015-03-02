@@ -15,6 +15,10 @@ public class Listenery implements Listener{
 		if(e.getInventory().getType().equals(InventoryType.FURNACE)){
 			if(Komendy.fur.containsKey(e.getPlayer().getName())){
 				Furnace f = Komendy.fur.get(e.getPlayer().getName());
+				/* Zapomniałem powiedzieć!
+				   getContents() - służy do zwrócenia tabeli, której zawartość 
+				   stanowią wszystkie ItemStacki znajdujące się w danym Inventory﻿
+				*/
 				for(ItemStack is : f.getInventory().getContents()){
 					if(is !=null && is.getType() !=null && is.getType() != Material.AIR){
 						e.getPlayer().getInventory().addItem(is);
