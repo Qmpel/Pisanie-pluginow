@@ -60,8 +60,7 @@ public class Main extends JavaPlugin{
 						Score s3 = ob.getScore(Bukkit.getOfflinePlayer("Deaths: §638"));
 						s3.setScore(2);
 						p.setScoreboard(sb);
-					} else{
-						nicks.remove(s);
+						Bukkit.broadcastMessage(s);
 					}
 				}
 			}
