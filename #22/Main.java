@@ -47,6 +47,11 @@ public class Main extends JavaPlugin{
 		return instance;
 	}
 	
+	/*
+	  Poprawiono loop'a for(String s : nicks)
+	  Nie wywala już bledu 'ConcurrentModificationException'
+	*/
+	
 	private void refresh(){
 		Bukkit.getScheduler().runTaskTimer(this, new Runnable(){
 			public void run(){
