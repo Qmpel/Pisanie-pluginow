@@ -7,6 +7,12 @@ import org.bukkit.scheduler.BukkitRunnable;
 
 public class Listenery implements Listener{
 	
+	/*
+	  Umieszczono dodawanie board'a w tasku.
+	  Nie wiadomo czemu, ale tak po prostu musi być :/
+	  W przeciwnym razie - wywala blad...
+	*/
+	
 	@EventHandler
 	public void onJoin(final PlayerJoinEvent e){
 		new BukkitRunnable() {
