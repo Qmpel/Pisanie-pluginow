@@ -16,14 +16,14 @@ public class Listenery implements Listener, CommandExecutor{
 	public void onChat(AsyncPlayerChatEvent e){
 		if(!chat){
 			if(!e.getPlayer().hasPermission("chat.bypass")){
-				e.getPlayer().sendMessage("§cChat wylaczony!");
+				e.getPlayer().sendMessage("Â§cChat wylaczony!");
 				e.setCancelled(true);
 			}
 		}
 		if(e.getPlayer().isOp()){
-			e.setFormat("§7§l[§c§lOP§7§l] §a%s§8§l: §b§l%s");
+			e.setFormat("Â§7Â§l[Â§cÂ§lOPÂ§7Â§l] Â§a%sÂ§8Â§l: Â§bÂ§l%s");
 		} else{
-			e.setFormat("§9%s§8§l: §7%s");
+			e.setFormat("Â§9%sÂ§8Â§l: Â§7%s");
 		}
 	}
 
@@ -53,10 +53,18 @@ public class Listenery implements Listener, CommandExecutor{
 			if(args[0].equalsIgnoreCase("clear")){
 				int i = 0;
 				while(i < 101){
+					/* Opcja alternatywna:
+					  for(Player p : Bukkit.getOnlinePlayers()){
+					  	p.sendMessage("");
+					  }
+					  Te opcje nalezy wstawic zamiast Bukkit.broadcast...
+					  Jaka jest jej przewaga na broadcastem?
+					  Nie czysci ci konsoli :)
+					*/
 					Bukkit.broadcastMessage("");
 					i++;
 				}
-				Bukkit.broadcastMessage("§a§lChat wyczyszczony!");
+				Bukkit.broadcastMessage("Â§aÂ§lChat wyczyszczony!");
 			}
 		}
 		return false;
