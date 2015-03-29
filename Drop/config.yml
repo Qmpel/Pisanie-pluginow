@@ -1,0 +1,22 @@
+blockDrop:
+  nazwa1:
+    from: stone
+    drop: golden_apple
+    dropData: 1
+    chance: 55.5
+    useY: true
+    minY: 40
+    minAmount: 1
+    maxAmount: 3
+    useTools: false
+mobDrop:
+  nazwa1:
+    from: creeper
+    drop: tnt
+    chance: 40
+    minAmount: 2
+    maxAmount: 5
+    useTools: true
+    tools:
+    - diamond_sword
+    - gold_sword
