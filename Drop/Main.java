@@ -13,6 +13,8 @@ public class Main extends JavaPlugin{
 	public void onEnable() {
 		instance = this;
 		saveDefaultConfig();
+		DataLoader.loadBlocks();
+		DataLoader.loadMobs();
 	}
 	
 	public void onDisable() {}
