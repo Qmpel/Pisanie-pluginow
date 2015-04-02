@@ -6,15 +6,16 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 
 public class DataLoader{
 
 	public static void loadBlocks(){
 		ConfigurationSection cs1 = Main.getInst().getConfig().getConfigurationSection("blockDrop");
-		ItemToDrop drop = new ItemToDrop();
-		drop.setType(DropType.BLOCK);
 		for(String s : cs1.getKeys(false)){
+			ItemToDrop drop = new ItemToDrop();
+			drop.setType(DropType.BLOCK);
 			ConfigurationSection cs = cs1.getConfigurationSection(s);
 			Material from = Material.matchMaterial(cs.getString("from").toUpperCase());
 			if(from == null){
@@ -48,14 +49,15 @@ public class DataLoader{
 				}
 				drop.setTools(m);
 			}
+			Main.drops.add(drop);
 		}
-		Main.drops.add(drop);
 	}
+	@SuppressWarnings("deprecation")
 	public static void loadMobs(){
 		ConfigurationSection cs1 = Main.getInst().getConfig().getConfigurationSection("mobDrop");
-		ItemToDrop drop = new ItemToDrop();
-		drop.setType(DropType.MOB);
 		for(String s : cs1.getKeys(false)){
+			ItemToDrop drop = new ItemToDrop();
+			drop.setType(DropType.MOB);
 			ConfigurationSection cs = cs1.getConfigurationSection(s);
 			if(EntityType.fromName(cs.getString("from").toUpperCase()) == null){
 				Utils.ERROR(s + " -> wrong 'from' type");
@@ -84,7 +86,7 @@ public class DataLoader{
 				}
 				drop.setTools(m);
 			}
+			Main.drops.add(drop);
 		}
-		Main.drops.add(drop);
 	}
 }
