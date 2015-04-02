@@ -3,6 +3,7 @@ package me.kamilkime.youtube;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin{
@@ -15,6 +16,8 @@ public class Main extends JavaPlugin{
 		saveDefaultConfig();
 		DataLoader.loadBlocks();
 		DataLoader.loadMobs();
+		Bukkit.getPluginManager().registerEvents(new BlockBreakListener(), this);
+		Bukkit.getPluginManager().registerEvents(new EntityDeathListener(), this);
 	}
 	
 	public void onDisable() {}

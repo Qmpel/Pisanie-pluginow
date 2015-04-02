@@ -9,6 +9,17 @@ blockDrop:
     minAmount: 1
     maxAmount: 3
     useTools: false
+  nazwa2:
+    from: stone
+    drop: diamond
+    chance: 20
+    useY: true
+    minY: 20
+    minAmount: 3
+    maxAmount: 10
+    useTools: true
+    tools:
+    - wood_pickaxe
 mobDrop:
   nazwa1:
     from: creeper
